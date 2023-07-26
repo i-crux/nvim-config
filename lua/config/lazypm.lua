@@ -11,7 +11,8 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-local opts = {}
+local opts = {
+}
 
 local plugins = {
     {
@@ -19,7 +20,43 @@ local plugins = {
         lazy = false,
         priority = 1000,
         opts = {},
+        dependencies = {
+            'nvim-lualine/lualine.nvim',
+            'nvim-tree/nvim-web-devicons',
+            "utilyre/barbecue.nvim",
+            "SmiteshP/nvim-navic",
+        },
     },
+    { 'akinsho/bufferline.nvim' },
+    { "lukas-reineke/indent-blankline.nvim" },
+    { "lewis6991/gitsigns.nvim" },
+    { "glepnir/dashboard-nvim" },
+    { "RRethy/vim-illuminate" },
+
+    -- init.lua:
+    {
+        'nvim-telescope/telescope.nvim', tag = '0.1.2',
+        -- or                              , branch = '0.1.x',
+        dependencies = { 
+            'nvim-lua/plenary.nvim',
+            -- 选装 --
+            { 
+                'nvim-telescope/telescope-fzf-native.nvim', 
+                build = 'make' 
+            },
+        },
+    },
+
+    {
+        "nvim-treesitter/nvim-treesitter",
+        dependencies = {
+            "nvim-treesitter/playground",
+            "nvim-treesitter/nvim-treesitter-textobjects",
+        },
+        build = ":TSUpdate",
+    },
+
+
 }
 
 require("lazy").setup(plugins, opts)
