@@ -33,7 +33,7 @@ return {
     },
     {
         "akinsho/bufferline.nvim",
-        event = "VeryLazy",
+        -- event = "VeryLazy",
         config = true,
     },
     -- {
