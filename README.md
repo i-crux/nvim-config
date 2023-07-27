@@ -9,3 +9,4 @@ a config for neovim
 - make
 - nodejs
 - npm
+- unzip
