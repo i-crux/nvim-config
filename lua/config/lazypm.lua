@@ -79,6 +79,13 @@ local plugins = {
     { "echasnovski/mini.comment" },
     {'norcalli/nvim-colorizer.lua'},
     {'voldikss/vim-floaterm'},
+    { 
+        "iamcco/markdown-preview.nvim", 
+        build = "cd app && npm install", 
+        setup = function() vim.g.mkdp_filetypes = { "markdown" } end, 
+        ft = { "markdown" }, 
+    },
+    { 'lambdalisue/suda.vim' },
 }
 
 require("lazy").setup(plugins, opts)

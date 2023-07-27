@@ -28,4 +28,20 @@ require('colorizer').setup()
 -- floaterm
 vim.keymap.set('n', '<leader>t', vim.cmd.FloatermToggle)
 vim.keymap.set('t', '<leader>t', vim.cmd.FloatermToggle)
+-- markdown preview
+vim.keymap.set('n', '<leader>p', vim.cmd.MarkdownPreviewToggle)
+vim.keymap.set('i', '<leader>p', vim.cmd.MarkdownPreviewToggle)
+-- for suda
+vim.api.nvim_create_user_command('W',
+  function(opts)
+    vim.cmd("SudaWrite")
+  end,
+  { nargs = 0 })
+
+vim.api.nvim_create_user_command('R',
+  function(opts)
+    vim.cmd("SudaRead")
+  end,
+  { nargs = 0 })
+
 
