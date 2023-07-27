@@ -56,7 +56,29 @@ local plugins = {
         build = ":TSUpdate",
     },
 
-
+    
+    { "folke/persistence.nvim" },
+    { "windwp/nvim-autopairs" },
+    { "ethanholz/nvim-lastplace" },
+    {
+        "nvim-neo-tree/neo-tree.nvim",
+        dependencies = {
+            "nvim-lua/plenary.nvim",
+            "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+            "MunifTanjim/nui.nvim",
+        },
+    },
+    { 
+        "folke/which-key.nvim", 
+        event = "VeryLazy",
+        init = function()
+            vim.o.timeout = true
+            vim.o.timeoutlen = 300
+        end,
+    },
+    { "echasnovski/mini.comment" },
+    {'norcalli/nvim-colorizer.lua'},
+    {'voldikss/vim-floaterm'},
 }
 
 require("lazy").setup(plugins, opts)
