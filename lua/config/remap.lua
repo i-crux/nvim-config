@@ -25,4 +25,4 @@ remap("n", "<leader>v", "<C-w>v", opt)
 remap("n", "<C-b>", "<cmd>bNext<CR>")
 
 -- leader y 复制到剪切板 --
-remap({ "v", "n" }, "<leader>y", "\"+y")
+remap({ "v", "n" }, "<leader>y", '"+y')
