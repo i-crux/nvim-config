@@ -61,7 +61,7 @@ return {
         end,
         ft = { "markdown" },
         keys = {
-            { "<leader>p", "<cmd>MarkdownPreviewToggle<CR>", desc = "preview markdown", mode = { "n", "i" } }
+            { "<leader>p", "<cmd>MarkdownPreviewToggle<CR>", desc = "preview markdown", mode = { "n"} }
         },
     },
     {
