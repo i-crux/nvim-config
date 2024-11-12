@@ -19,6 +19,11 @@ return {
         event = "VeryLazy",
         config = true,
     },
+    -- {
+    --     "ludovicchabant/vim-gutentags",
+    --     -- event = "VeryLazy",
+    --     -- config = true,
+    -- },
     {
         "nvim-neo-tree/neo-tree.nvim",
         dependencies = {

@@ -1,6 +1,5 @@
 local opt1 = {noremap = true, silent = true}
 local opt2 = {noremap = true}
-local opt3 = {noremap = true, silent = true}
 local remap = vim.keymap.set
  
 -- disable using left right up down arrow key --
@@ -14,8 +13,8 @@ remap("n", "j", [[v:count ? 'j' : 'gj']], { noremap = true, expr = true })
 remap("n", "k", [[v:count ? 'k' : 'gk']], { noremap = true, expr = true })
 
 -- 分屏 --
-remap("n", "<leader>s", "<C-w>s", opt)
-remap("n", "<leader>v", "<C-w>v", opt)
+remap("n", "<leader>s", "<C-w>s", opt2)
+remap("n", "<leader>v", "<C-w>v", opt2)
 -- vim.keymap.set("n", "<leader>c", "<C-w>c", opt)
 
 -- 回到目录 --
